@@ -1,0 +1,36 @@
+# config/config.yaml
+aws:
+  region: ap-south-1
+  sqs:
+    firecrawl_queue_url: "https://sqs.ap-south-1.amazonaws.com/451534050943/Greenfind-firecrawl"
+    custom_crawler_queue_url: "https://sqs.ap-south-1.amazonaws.com/451534050943/Greenfind-CustomCrawler"
+
+firecrawl:
+  api_key: "fc-c01463181b934cf5bd67cd41e75f83b89"
+  limit: 100
+
+custom_crawler:
+  browser: "playwright" 
+  headless: true
+  timeout: 600
+  max_pages: 1000
+  respect_robots_txt: true
+  excluded_patterns:
+    - "wp-content/uploads"
+    - "tag_"
+    - "/wp-content/"
+    - "/tags/"
+    - "/category/"
+    - "/author/"
+    - "/page/"
+    - "/feed/"
+    - "/comments/"
+
+storage:
+  output_dir: "scraped_data"
+  pdf_folder: "scraped_data/pdf"
+  html_folder: "scraped_data/html"
+  markdown_folder: "scraped_data/markdown"
+  
+threadpool:
+  size: 5

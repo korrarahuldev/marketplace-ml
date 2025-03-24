@@ -1,0 +1,11 @@
+# requirements.txt
+uv
+fastapi==0.104.1
+uvicorn==0.23.2
+boto3==1.28.38
+pyyaml==6.0
+playwright==1.38.0
+requests==2.31.0
+beautifulsoup4==4.12.2
+markdown==3.4.4
+pandas==2.1.1
